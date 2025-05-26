@@ -8,3 +8,8 @@ vim.keymap.set("n", "<leader>L", "<CMD>setlocal number!<CR>", { desc = "Line num
 
 -- nnoremap <silent> <leader>a :set list!<CR>
 vim.keymap.set("n", "<leader>a", "<CMD>set list!<CR>", { desc = "Toggle render of list chars" })
+
+vim.keymap.set("n", "<leader>e", function() require('snacks').explorer() end, { desc = "Show file explorer" })
+
+vim.keymap.set("n", "<leader>f", function() require('fzf-lua').files() end, { desc = "Find files" })
+vim.keymap.set("n", "<leader>s", function() require('fzf-lua').live_grep() end, { desc = "Search files" })
