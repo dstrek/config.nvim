@@ -37,7 +37,37 @@ return {
 		completion = {
 			ghost_text = { enabled = true },
 			documentation = { auto_show = true, auto_show_delay_ms = 500 },
-			signature = { enabled = true },
+			menu = {
+				border = "rounded",
+				draw = {
+					components = {
+						kind_icon = {
+							text = function(ctx)
+								local kind_icon, _, _ = require("mini.icons").get("lsp", ctx.kind)
+								return kind_icon
+							end,
+							-- (optional) use highlights from mini.icons
+							highlight = function(ctx)
+								local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
+								return hl
+							end,
+						},
+						kind = {
+							-- (optional) use highlights from mini.icons
+							highlight = function(ctx)
+								local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
+								return hl
+							end,
+						},
+					},
+				},
+			},
+		},
+		signature = {
+			enabled = true,
+			window = {
+				border = "rounded",
+			},
 		},
 
 		-- Default list of enabled providers defined so that you can extend it
