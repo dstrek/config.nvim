@@ -13,3 +13,5 @@ vim.keymap.set("n", "<leader>e", function() require('snacks').explorer() end, { 
 
 vim.keymap.set("n", "<leader>f", function() require('fzf-lua').files() end, { desc = "Find files" })
 vim.keymap.set("n", "<leader>s", function() require('fzf-lua').live_grep() end, { desc = "Search files" })
+
+vim.keymap.set("n", "gl", function() vim.diagnostic.open_float() end, { desc = "Open floating diagnostic window" })
