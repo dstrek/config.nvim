@@ -8,8 +8,10 @@ vim.keymap.set("n", "<leader>L", "<CMD>setlocal number!<CR>", { desc = "Line num
 
 -- nnoremap <silent> <leader>a :set list!<CR>
 vim.keymap.set("n", "<leader>A", "<CMD>set list!<CR>", { desc = "Toggle render of list chars" })
-vim.keymap.set("n", "<leader>ai", "<CMD>CodeCompanion<CR>", { desc = "Toggle render of list chars" })
-vim.keymap.set("n", "<leader>aa", "<CMD>CodeCompanionActions<CR>", { desc = "Toggle render of list chars" })
+
+-- ai bs
+vim.keymap.set({ "n", "v" }, "<leader>ai", "<CMD>CodeCompanion<CR>", { desc = "Toggle render of list chars" })
+vim.keymap.set({ "n", "v" }, "<leader>aa", "<CMD>CodeCompanionActions<CR>", { desc = "Toggle render of list chars" })
 
 vim.keymap.set("n", "<leader>e", function()
 	require("snacks").explorer()

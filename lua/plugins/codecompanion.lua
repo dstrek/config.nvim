@@ -6,15 +6,22 @@ return {
 	},
 	config = function()
 		require("codecompanion").setup({
+			display = {
+				chat = {
+					window = {
+						position = "right",
+					},
+				},
+			},
 			adapters = {
-				openai = function()
-					return require("codecompanion.adapters").extend("openai", {
+				gemini = function()
+					return require("codecompanion.adapters").extend("gemini", {
 						env = {
-							api_key = "cmd:cat ~/.openai-apikey",
+							api_key = "cmd:cat ~/.gemini-apikey",
 						},
 						schema = {
 							model = {
-								default = "gpt-4.1",
+								default = "gemini-2.5-flash-preview-05-20",
 							},
 						},
 					})
@@ -22,13 +29,13 @@ return {
 			},
 			strategies = {
 				chat = {
-					adapter = "openai",
+					adapter = "gemini",
 				},
 				inline = {
-					adapter = "openai",
+					adapter = "gemini",
 				},
 				cmd = {
-					adapter = "openai",
+					adapter = "gemini",
 				},
 			},
 		})
