@@ -1,37 +1,36 @@
 return {
-	"nvim-treesitter/nvim-treesitter", 
-	branch = 'master', 
-	lazy = false, 
+	"nvim-treesitter/nvim-treesitter",
+	branch = "master",
+	lazy = false,
 	build = ":TSUpdate",
 	config = function()
 		local configs = require("nvim-treesitter.configs")
 
 		configs.setup({
 			ensure_installed = {
-				"lua", 
-				"vim", 
-				"javascript", 
-				"typescript", 
-				"css", 
-				"html", 
-				"go", 
-				"sql", 
-				"yaml"
+				"lua",
+				"vim",
+				"javascript",
+				"typescript",
+				"css",
+				"html",
+				"go",
+				"sql",
+				"yaml",
 			},
 			auto_install = true,
 			highlight = { enable = true },
 			indent = { enable = true },
-			
+
 			incremental_selection = {
 				enable = true,
 				keymaps = {
 					init_selection = "<Enter>",
 					node_incremental = "<Enter>",
 					scope_incremental = false,
-					node_decremental = "<Backspace>"
-				}
-			}
+					node_decremental = "<Backspace>",
+				},
+			},
 		})
-	end
+	end,
 }
-
