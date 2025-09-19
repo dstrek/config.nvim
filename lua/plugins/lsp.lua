@@ -203,6 +203,7 @@ return {
 			cssls = {},
 			gopls = {},
 			ts_ls = {},
+			yamlls = {},
 			lua_ls = {
 				-- cmd = { ... },
 				-- filetypes = { ... },
@@ -237,6 +238,8 @@ return {
 			"stylua", -- Used to format Lua code
 			"prettierd",
 			"gofumpt",
+			"yamlls",
+			"yamlfmt",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

@@ -21,7 +21,7 @@ return {
 						},
 						schema = {
 							model = {
-								default = "gemini-2.5-flash-preview-05-20",
+								default = "gemini-2.5-flash-lite",
 							},
 						},
 					})

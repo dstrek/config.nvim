@@ -25,3 +25,17 @@ vim.opt.signcolumn = "yes"
 
 -- don't scroll text all the way off screen
 vim.opt.scrolloff = 5
+
+-- rendering whitespace
+vim.opt.listchars = {
+	tab = "▸ ",
+	trail = "·",
+	precedes = "←",
+	extends = "→",
+	eol = "↲",
+	nbsp = "␣",
+	space = ".",
+}
+
+-- clipboard
+vim.opt.clipboard = "unnamedplus"
