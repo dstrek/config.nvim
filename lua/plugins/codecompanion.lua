@@ -14,18 +14,20 @@ return {
 				},
 			},
 			adapters = {
-				gemini = function()
-					return require("codecompanion.adapters").extend("gemini", {
-						env = {
-							api_key = "cmd:cat ~/.gemini-apikey",
-						},
-						schema = {
-							model = {
-								default = "gemini-2.5-flash-lite",
+				http = {
+					gemini = function()
+						return require("codecompanion.adapters").extend("gemini", {
+							env = {
+								api_key = "cmd:cat ~/.gemini-apikey",
 							},
-						},
-					})
-				end,
+							schema = {
+								model = {
+									default = "gemini-2.5-flash-lite",
+								},
+							},
+						})
+					end,
+				},
 			},
 			strategies = {
 				chat = {
